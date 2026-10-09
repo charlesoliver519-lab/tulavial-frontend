@@ -15,6 +15,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import org.jetbrains.compose.resources.painterResource
+import androidx.compose.runtime.LaunchedEffect
+
+import com.example.data.model.LoginRequest
+import com.example.data.remote.AuthApi
 
 import tulavial.shared.generated.resources.Res
 import tulavial.shared.generated.resources.compose_multiplatform
@@ -44,6 +48,16 @@ fun App() {
                     Text("Compose: $greeting")
                 }
             }
+        }
+    }
+
+    LaunchedEffect(Unit) {
+        try {
+            val resp = AuthApi().login(LoginRequest("admin", "admin123"))
+            println("RESPUESTA BACKEND: $resp")
+        } catch (e: Throwable) {
+            println("ERROR DETECTADO: ${e::class.simpleName} - ${e.message}")
+            e.printStackTrace()
         }
     }
 }
