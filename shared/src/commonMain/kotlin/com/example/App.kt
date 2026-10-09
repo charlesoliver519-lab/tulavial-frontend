@@ -1,63 +1,32 @@
 package com.example
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.safeContentPadding
-import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import org.jetbrains.compose.resources.painterResource
-import androidx.compose.runtime.LaunchedEffect
-
-import com.example.data.model.LoginRequest
-import com.example.data.remote.AuthApi
-
-import tulavial.shared.generated.resources.Res
-import tulavial.shared.generated.resources.compose_multiplatform
+import com.example.domain.Rol
+import com.example.navigation.Screen
+import com.example.ui.home.*
+import com.example.ui.login.LoginScreen
 
 @Composable
-@Preview
 fun App() {
     MaterialTheme {
-        var showContent by remember { mutableStateOf(false) }
-        Column(
-            modifier = Modifier
-                .background(MaterialTheme.colorScheme.primaryContainer)
-                .safeContentPadding()
-                .fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            Button(onClick = { showContent = !showContent }) {
-                Text("Click me!")
-            }
-            AnimatedVisibility(showContent) {
-                val greeting = remember { Greeting().greet() }
-                Column(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                ) {
-                    Image(painterResource(Res.drawable.compose_multiplatform), null)
-                    Text("Compose: $greeting")
-                }
-            }
-        }
-    }
+        Surface {
+            var screen by remember { mutableStateOf<Screen>(Screen.Login) }
+            val logout = { screen = Screen.Login }
 
-    LaunchedEffect(Unit) {
-        try {
-            val resp = AuthApi().login(LoginRequest("admin", "admin123"))
-            println("RESPUESTA BACKEND: $resp")
-        } catch (e: Throwable) {
-            println("ERROR DETECTADO: ${e::class.simpleName} - ${e.message}")
-            e.printStackTrace()
+            when (val s = screen) {
+                Screen.Login -> LoginScreen(onLoginExitoso = { usuario ->
+                    screen = when (Rol.from(usuario.rol)) {
+                        Rol.ADMINISTRADOR -> Screen.Administrador(usuario)
+                        Rol.SUPERVISOR -> Screen.Supervisor(usuario)
+                        else -> Screen.Ciudadano(usuario)
+                    }
+                })
+                is Screen.Ciudadano -> CiudadanoScreen(s.usuario, logout)
+                is Screen.Administrador -> AdministradorScreen(s.usuario, logout)
+                is Screen.Supervisor -> SupervisorScreen(s.usuario, logout)
+            }
         }
     }
 }
