@@ -54,9 +54,13 @@ kotlin {
     
     sourceSets {
         androidMain.dependencies {
+            implementation(libs.androidx.activity.ktx)
             implementation(libs.compose.uiToolingPreview)
             implementation(libs.compose.uiTooling)
             implementation(libs.ktor.client.okhttp)
+            implementation(libs.play.services.location)
+            implementation("com.google.android.gms:play-services-location:21.3.0")
+            implementation("androidx.activity:activity-compose:1.9.3")
         }
 
         iosMain.dependencies {
