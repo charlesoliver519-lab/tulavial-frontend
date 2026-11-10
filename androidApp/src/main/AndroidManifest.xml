@@ -3,6 +3,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- Entrega: Examen segundo parcial                    -->g
+
     <application
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
