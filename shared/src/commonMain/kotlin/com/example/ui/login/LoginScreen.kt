@@ -31,7 +31,7 @@ fun LoginScreen(
         OutlinedTextField(
             value = state.usuario,
             onValueChange = viewModel::onUsuarioChange,
-            label = { Text("Usuario") },
+            label = { Text("Ciudadano") },
             singleLine = true,
             modifier = Modifier.fillMaxWidth()
         )
