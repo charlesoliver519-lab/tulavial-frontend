@@ -10,7 +10,11 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.data.model.UsuarioDto
+import androidx.compose.ui.text.style.TextAlign
 
+/**
+ * Oliver
+ */
 @Composable
 fun LoginScreen(
     onLoginExitoso: (UsuarioDto) -> Unit,
@@ -59,5 +63,12 @@ fun LoginScreen(
             if (state.cargando) CircularProgressIndicator(Modifier.size(20.dp), strokeWidth = 2.dp)
             else Text("Iniciar sesión")
         }
+
+        Spacer(Modifier.height(24.dp))
+        Text(
+            text = "Juan Carlos Oliver Merida",
+            style = MaterialTheme.typography.bodySmall,
+            textAlign = TextAlign.Center
+        )
     }
 }
