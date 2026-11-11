@@ -29,6 +29,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -61,6 +62,16 @@ fun LoginScreen(
             color = MaterialTheme.colorScheme.primary
         )
 
+        Spacer(modifier = Modifier.height(4.dp))
+
+        // ETIQUETA CON TU NOMBRE
+        Text(
+            text = "Desarrollado por: Ivan Peralta Perez",
+            style = MaterialTheme.typography.labelLarge,
+            fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.secondary
+        )
+
         Spacer(modifier = Modifier.height(8.dp))
 
         Text(
@@ -70,7 +81,7 @@ fun LoginScreen(
             textAlign = TextAlign.Center
         )
 
-        Spacer(modifier = Modifier.height(36.dp))
+        Spacer(modifier = Modifier.height(32.dp))
 
         // Campo de Usuario
         OutlinedTextField(
