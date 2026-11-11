@@ -38,7 +38,7 @@ fun CiudadanoScreen(usuario: UsuarioDto, onLogout: () -> Unit) = RoleScaffold(
 
 @Composable
 fun AdministradorScreen(usuario: UsuarioDto, onLogout: () -> Unit) = RoleScaffold(
-    titulo = "Panel de administración",
+    titulo = "Panel administrativo",
     usuario = usuario,
     funciones = listOf("Mapa de calor de reportes", "Priorización de reportes", "Cambiar estatus"),
     onLogout = onLogout
