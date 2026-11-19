@@ -66,7 +66,7 @@ fun LoginScreen(
 
         // ETIQUETA CON TU NOMBRE
         Text(
-            text = "prueba examn : Ivan Peralta Perez",
+            text = "prueba examn: Ivan Peralta Perez",
             style = MaterialTheme.typography.labelLarge,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.secondary
