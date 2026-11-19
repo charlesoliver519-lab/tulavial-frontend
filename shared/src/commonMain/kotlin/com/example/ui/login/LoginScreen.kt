@@ -39,7 +39,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.data.model.UsuarioDto
-import androidx.compose.ui.text.style.TextAlign
+
 
 /**
  * Oliver
@@ -70,7 +70,7 @@ fun LoginScreen(
 
         // ETIQUETA CON TU NOMBRE
         Text(
-            text = "Desarrollado por: Ivan Peralta Perez",
+            text = "prueba examen: Ivan Peralta Perez",
             style = MaterialTheme.typography.labelLarge,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.secondary
