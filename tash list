@@ -1,0 +1,28 @@
+* [33m5d2baac[m[33m ([m[1;31morigin/feature/examen-prueba[m[33m, [m[1;32mfeature/examen-prueba[m[33m)[m Cambio de Usuario a Ciudadano en un label
+* [33ma4809ae[m Prueba1 en manifest
+[31m|[m * [33m06becf7[m[33m ([m[1;31morigin/feature/sensor-gps[m[33m, [m[1;32mfeature/sensor-gps[m[33m)[m feat: modulo de ubicacion GPS con permisos para Android
+[31m|[m[31m/[m  
+[31m|[m * [33m186e5f1[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m feat: agregar Caddyfile y Dockerfile para despliegue web en Railway
+[31m|[m *   [33mbd12d8d[m Merge pull request #4 from charlesoliver519-lab/develop
+[31m|[m [34m|[m[31m\[m  
+[31m|[m [34m|[m[31m/[m  
+[31m|[m[31m/[m[34m|[m   
+* [34m|[m   [33mfb00ccd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m Merge pull request #3 from charlesoliver519-lab/feature/despliegue-web
+[36m|[m[1;31m\[m [34m\[m  
+[36m|[m * [34m|[m [33m75db54f[m[33m ([m[1;31morigin/feature/despliegue-web[m[33m, [m[1;32mfeature/despliegue-web[m[33m)[m fix: resolver conflicto en ApiConfig.kt de androidMain
+[36m|[m * [34m|[m [33m071f138[m build: agregar paquete de produccion web en la carpeta web
+[36m|[m [1;31m|[m *   [33m4edc2ab[m Merge pull request #2 from charlesoliver519-lab/develop
+[36m|[m [1;31m|[m [1;32m|[m[36m\[m  
+[36m|[m [1;31m|[m[36m_[m[1;32m|[m[36m/[m  
+[36m|[m[36m/[m[1;31m|[m [1;32m|[m   
+* [1;31m|[m [1;32m|[m   [33m5a27402[m Merge pull request #1 from charlesoliver519-lab/feature/conectar-railway
+[1;31m|[m[1;35m\[m [1;31m\[m [1;32m\[m  
+[1;31m|[m [1;35m|[m[1;31m/[m [1;32m/[m  
+[1;31m|[m[1;31m/[m[1;35m|[m [1;32m|[m   
+[1;31m|[m * [1;32m|[m [33mad330f2[m[33m ([m[1;31morigin/feature/conectar-railway[m[33m, [m[1;32mfeature/conectar-railway[m[33m)[m feat: apuntar la app al backend desplegado en Railway
+[1;31m|[m[1;31m/[m [1;32m/[m  
+* [1;32m/[m [33m280c983[m feat: actualizar URL de conexion en ApiConfig
+[1;32m|[m[1;32m/[m  
+* [33m4e6bdfa[m[33m ([m[1;33mtag: [m[1;33mv0.1-login-roles[m[33m)[m Prueba realizada con éxito
+* [33m933f947[m Conexion entre Ktor Client y Backend comprobada con exito
+* [33mefaa797[m Estructura base del frontend con KMP y Compose Multiplatform
