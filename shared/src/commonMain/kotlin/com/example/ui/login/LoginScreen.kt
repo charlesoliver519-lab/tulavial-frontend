@@ -29,7 +29,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -39,11 +38,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.data.model.UsuarioDto
-import androidx.compose.ui.text.style.TextAlign
 
-/**
- * Oliver
- */
 @Composable
 fun LoginScreen(
     onLoginExitoso: (UsuarioDto) -> Unit,
@@ -65,15 +60,10 @@ fun LoginScreen(
             style = MaterialTheme.typography.headlineLarge,
             color = MaterialTheme.colorScheme.primary
         )
-
-        Spacer(modifier = Modifier.height(4.dp))
-
-        // ETIQUETA CON TU NOMBRE
         Text(
-            text = "Desarrollado por: Ivan Peralta Perez",
-            style = MaterialTheme.typography.labelLarge,
-            fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.secondary
+        text = "kmp prueba",
+        style = MaterialTheme.typography.headlineLarge,
+        color = MaterialTheme.colorScheme.primary
         )
 
         Spacer(modifier = Modifier.height(8.dp))
@@ -172,12 +162,5 @@ fun LoginScreen(
                 )
             }
         }
-
-        Spacer(Modifier.height(24.dp))
-        Text(
-            text = "Juan Carlos Oliver Merida",
-            style = MaterialTheme.typography.bodySmall,
-            textAlign = TextAlign.Center
-        )
     }
 }
