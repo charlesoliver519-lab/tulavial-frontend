@@ -60,6 +60,11 @@ fun LoginScreen(
             style = MaterialTheme.typography.headlineLarge,
             color = MaterialTheme.colorScheme.primary
         )
+        Text(
+        text = "kmp prueba",
+        style = MaterialTheme.typography.headlineLarge,
+        color = MaterialTheme.colorScheme.primary
+        )
 
         Spacer(modifier = Modifier.height(8.dp))
 
