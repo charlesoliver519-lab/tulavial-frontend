@@ -61,7 +61,7 @@ fun LoginScreen(
             color = MaterialTheme.colorScheme.primary
         )
         Text(
-        text = "kmp prueba",
+        text = "kmp prueba ",
         style = MaterialTheme.typography.headlineLarge,
         color = MaterialTheme.colorScheme.primary
         )
@@ -72,7 +72,7 @@ fun LoginScreen(
             text = "Juan Carlos Oliver Merida",
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
-            textAlign = TextAlign.Centergit add .
+            textAlign = TextAlign.Center
         )
 
         Text(
