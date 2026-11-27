@@ -72,7 +72,7 @@ fun LoginScreen(
             text = "Juan Carlos Oliver Merida",
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
-            textAlign = TextAlign.Center
+            textAlign = TextAlign.Centergit add .
         )
 
         Text(
