@@ -69,6 +69,13 @@ fun LoginScreen(
         Spacer(modifier = Modifier.height(8.dp))
 
         Text(
+            text = "Juan Carlos Oliver Merida",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            textAlign = TextAlign.Center
+        )
+
+        Text(
             text = "Reportar en 30 segundos, reparar más rápido",
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
